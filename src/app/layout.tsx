@@ -1,3 +1,4 @@
+import { BaseHead } from '@/components/BaseHead';
 import './globals.css'
 import { Space_Grotesk } from 'next/font/google'
 
@@ -15,6 +16,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <BaseHead />
+      </head>
       <body className={`${grotesk.className} flex flex-col h-screen justify-between`}>
         {/* main content */}
         <section className="mb-auto">
