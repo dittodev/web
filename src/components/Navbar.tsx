@@ -1,16 +1,18 @@
 import { getServerSession } from "next-auth";
 import Link from "next/link";
-import { buttonVariants } from "./ui/Button";
-import { SignInButton } from "./SignInButton";
-import { SignOutButton } from "./SignOutButton";
+import { Button, buttonVariants } from "./ui/Button";
+import { authOptions } from "@/lib/auth";
 
 const Navbar = async () => {
-  const session = await getServerSession();
+  const session = await getServerSession(authOptions);
 
   return (
     <div className="fixed backdrop-blur-sm bg-white/75 dark:bg-slate-900/75 z-50 top-0 left-0 right-0 h-20 border-b border-slate-300 dark:border-slate-700 shadow-sm flex items-center justify-between">
       <div className="container max-w-7xl mx-auto w-full flex justify-between items-center">
-        <Link href="/" className={buttonVariants({ variant: "link" })}>
+        <Link
+          href="/"
+          className={`${buttonVariants({ variant: "link" })} text-2xl`}
+        >
           cube
         </Link>
 
@@ -23,10 +25,14 @@ const Navbar = async () => {
               >
                 dashboard
               </Link>
-              <SignOutButton />
+              <Button>
+                <Link href="/logout">sign out</Link>
+              </Button>
             </>
           ) : (
-            <SignInButton />
+            <Button>
+              <Link href="/login">sign in</Link>
+            </Button>
           )}
         </div>
       </div>
