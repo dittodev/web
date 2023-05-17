@@ -1,4 +1,4 @@
-import { BaseHead } from '@/components/BaseHead';
+import { BaseHead } from '@/components';
 import './globals.css'
 import { Space_Grotesk } from 'next/font/google'
 
