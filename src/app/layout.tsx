@@ -5,6 +5,7 @@ import Providers from "@/components/Providers";
 import { BaseHead } from "@/components/BaseHead";
 import Navbar from "@/components/Navbar";
 import { cn } from "@/lib/utils";
+import MobileMenu from "@/components/MobileMenu";
 
 const grotesk = Space_Grotesk({ subsets: ["latin"] });
 
@@ -31,6 +32,8 @@ export default function RootLayout({
           {/* @ts-expect-error Server Component */}
           <Navbar />
           <Toaster position="bottom-right" />
+
+          <MobileMenu />
 
           <main className="pt-24 px-4">{children}</main>
         </Providers>

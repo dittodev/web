@@ -9,7 +9,8 @@ module.exports = {
     extend: {
       colors: {
         themeColor: "#119DA4",
-        themeBlack: "#121212"
+        themeBlack: "#121212",
+        blurple: "#5865F2"
       }
     },
   },
