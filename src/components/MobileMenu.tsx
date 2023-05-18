@@ -41,13 +41,28 @@ const MobileMenu = () => {
               <DropdownMenuSeparator />
               <DropdownMenuItem asChild>
                 {session ? (
-                  <Link
-                    href="/dashboard"
-                    className="w-full flex items-center gap-1.5"
-                  >
-                    <LayoutDashboard className="mr-2 h-5 w-5" />
-                    <span>Dashboard</span>
-                  </Link>
+                  <>
+                    <DropdownMenuItem>
+                      <Link
+                        href="/dashboard"
+                        className="w-full flex items-center gap-1.5"
+                      >
+                        <LayoutDashboard className="mr-2 h-5 w-5" />
+                        <span>Dashboard</span>
+                      </Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuSeparator />
+                    <DropdownMenuItem
+                      onClick={() => router.push("/logout")}
+                      className="gap-1.5"
+                    >
+                      <User className="mr-2 h-5 w-5" />
+                      <span>{isLoading ? "Signing out" : "Sign out"}</span>
+                      {isLoading ? (
+                        <Loader2 className="animate-spin h-4 w-4" />
+                      ) : null}
+                    </DropdownMenuItem>
+                  </>
                 ) : (
                   <Link
                     href="/login"
@@ -57,17 +72,6 @@ const MobileMenu = () => {
                     <span>Sign in</span>
                   </Link>
                 )}
-              </DropdownMenuItem>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem
-                onClick={() => router.push("/logout")}
-                className="gap-1.5"
-              >
-                <User className="mr-2 h-5 w-5" />
-                <span>{isLoading ? "Signing out" : "Sign out"}</span>
-                {isLoading ? (
-                  <Loader2 className="animate-spin h-4 w-4" />
-                ) : null}
               </DropdownMenuItem>
             </DropdownMenuGroup>
           </DropdownMenuContent>

@@ -11,7 +11,7 @@ const Page = () => {
   if (session.status === "unauthenticated") router.push("/login");
 
   return (
-    <div className="text-center">
+    <div className="page text-center">
       <h1 className="text-4xl font-bold">welcome to cube passport</h1>
       <p>are you sure you want to sign out?</p>
       <SignOutForm />

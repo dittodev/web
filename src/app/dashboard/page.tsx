@@ -12,7 +12,7 @@ const page = async () => {
   const user = await getServerSession(authOptions);
   if (!user) return notFound();
 
-  return <div>dashboard</div>;
+  return <div className="page">dashy dash</div>;
 };
 
 export default page;

@@ -35,7 +35,7 @@ export default function RootLayout({
 
           <MobileMenu />
 
-          <main className="pt-24 px-4">{children}</main>
+          <main className="pt-20">{children}</main>
         </Providers>
 
         {/* mobile menu height */}
