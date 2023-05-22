@@ -4,8 +4,8 @@ import { authOptions } from "@/lib/auth";
 import { notFound } from "next/navigation";
 
 export const metadata: Metadata = {
-  title: "cube | dashboard",
-  description: "The cube bot",
+  title: "ditto | dashboard",
+  description: "The ditto bot",
 };
 
 const page = async () => {

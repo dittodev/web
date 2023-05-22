@@ -12,7 +12,7 @@ const Page = () => {
 
   return (
     <div className="page text-center">
-      <h1 className="text-4xl font-bold">welcome to cube passport</h1>
+      <h1 className="text-4xl font-bold">welcome to ditto passport</h1>
       <p className="pb-4">please select a sign-in method</p>
       <UserAuthForm />
     </div>

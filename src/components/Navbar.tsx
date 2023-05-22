@@ -13,7 +13,7 @@ const Navbar = async () => {
           href="/"
           className={`${buttonVariants({ variant: "link" })} text-2xl`}
         >
-          cube
+          ditto
         </Link>
 
         <div className="hidden md:flex gap-4">

@@ -10,8 +10,8 @@ import MobileMenu from "@/components/MobileMenu";
 const grotesk = Space_Grotesk({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "cube bot",
-  description: "The cube bot",
+  title: "ditto bot",
+  description: "The ditto bot",
 };
 
 export default function RootLayout({
