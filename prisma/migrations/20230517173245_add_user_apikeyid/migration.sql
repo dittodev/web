@@ -1,2 +1,0 @@
--- AlterTable
-ALTER TABLE `User` ADD COLUMN `apiKeyID` VARCHAR(191) NULL;
